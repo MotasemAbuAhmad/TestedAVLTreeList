@@ -882,10 +882,19 @@ class AVLTreeList(object):
     time complexity: O(1)"""
     def getSize(self):
         return self.size
-
+    """ selects node at index i
+    @type i: int
+    @param i: the index
+    @returns: the node
+    time complexity: O(log n)"""
     def select(self, i):
         return self.retrieve_rec(self.root, i + 1)
-
+    """gets the rank of the first node val
+    @type val: str
+    @param val: the data
+    @rtype: int
+    @returns: the rank of val
+    time complexity: O(n)"""
     def rank(self, val):
         return self.search(val)
 
